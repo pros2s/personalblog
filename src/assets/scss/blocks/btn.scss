@@ -1,0 +1,37 @@
+.btn {
+  display: inline-block;
+  padding: 1.13em 2.1em;
+
+  background-color: $secondary;
+  border: none;
+  border-radius: 4em;
+
+  vertical-align: top;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-decoration: none;
+  line-height: 1.1;
+  color: $white;
+
+  transition: background-color .1s linear;
+  &--red {
+    background-color: $red;
+    box-shadow: 0 .7rem 1.7rem -1rem rgba($red, .3);
+
+    &:hover {
+      background-color: darken($red, 10%);
+    }
+  }
+
+  &--blue {
+    background-color: $blue;
+    box-shadow: 0 .7rem 1.7rem -1rem rgba($blue, .3);
+
+    &:hover {
+      background-color: darken($blue, 10%);
+    }
+  }
+}
