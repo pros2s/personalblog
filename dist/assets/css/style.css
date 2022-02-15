@@ -309,34 +309,84 @@ li {
 
 .stories {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(150px, auto);
-    grid-gap: 1rem 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 13px;
+    grid-template-rows: 195px;
+    margin-bottom: 3rem;
 }
 
 .stories__item {
-    margin: 0;
-    padding: 1.5rem;
-    background-color: #41db62;
-    border-radius: 1rem;
-    border: 1px solid #fff;
-    font-size: 1.5rem;
-    color: #000;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
-.stories__item:nth-child(2n+1) {
-    background-color: #c4db41;
+.stories__item:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
-.stories__item:nth-child(5) {
-    grid-column: 1/4;
+.stories__item:hover .stories__preview {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    transition-duration: 2s;
 }
 
-.stories__item:nth-child(6) {
-    grid-column: 3;
-    grid-row: 1/3;
+.stories__preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
-.stories__item:nth-child(7) {
-    grid-column: span 3;
+.stories__title,
+.stories__date {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0.85;
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+
+.stories__title {
+    top: 0;
+    padding: 1.4rem;
+}
+
+.stories__date {
+    text-align: right;
+    bottom: 0;
+    padding-right: 1.7rem;
+    padding-bottom: 1.4rem;
+}
+
+.add-post {
+    border-radius: 5px;
+    background-color: #121212;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.45);
+    margin-bottom: 3rem;
+    padding: 1.5rem 2rem;
 }

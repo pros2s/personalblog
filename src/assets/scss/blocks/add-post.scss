@@ -1,0 +1,75 @@
+.add-post {
+  border-radius: 5px;
+
+  background-color: $secondary;
+  box-shadow: 0 15px 25px rgba($black,.45);
+
+  margin-bottom: 3rem;
+  padding: 1.5rem 2rem;
+}
+
+.add-post__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-post__textarea {
+  display: block;
+
+  background: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+
+  height: 25px;
+  width: 80%;
+
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: $white;
+  opacity: .85;
+
+  &::placeholder {
+    color: #D2D2D2;
+  }
+}
+
+.add-post__form-actions {
+  display: flex;
+}
+
+.add-post__file,
+.add-post__send {
+  display: block;
+  width: 4.4rem;
+  height: 4.4rem;
+
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+}
+
+.add-post__file {
+  background:#EBEBEB url("../images/stories/add_foto.svg") center no-repeat;
+
+  input {
+    display: none;
+  }
+
+  &:hover {
+    background-color: darken(#EBEBEB, 10%);
+  }
+}
+
+.add-post__send {
+  background-color: $blue;
+
+  padding: 1.4rem;
+  margin-left: 1.5rem;
+
+  &:hover {
+    background-color: darken($blue, 5%);
+  }
+}
