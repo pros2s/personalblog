@@ -442,17 +442,63 @@ li {
   color: #fff;
   margin-bottom: 1.5rem;
 }
+.post__title--mb1r {
+  margin-bottom: 1rem;
+}
 
 .post__link {
   font-size: 1.8rem;
   color: #fff;
   font-weight: 500;
 }
+.post__link--share {
+  display: flex;
+  align-items: center;
+}
+
+.post__description {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  color: #D2D2D2;
+}
 
 .post__text {
   font-size: 1.4rem;
   line-height: 1.3;
-  color: #D2D2D2;
+  color: #fff;
+}
+.post__text p {
+  margin-bottom: 2rem;
+}
+.post__text a {
+  color: #3137C9;
+}
+.post__text h2, .post__text h3, .post__text h4, .post__text h5, .post__text h6 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.post__text h2 {
+  font-size: 1.5em;
+}
+.post__text h3 {
+  font-size: 1.25em;
+}
+.post__text h4 {
+  font-size: 1.15em;
+}
+.post__text h5, .post__text h6 {
+  font-size: 1em;
+}
+.post__text ul, .post__text ol {
+  margin-bottom: 2rem;
+}
+.post__text ol {
+  list-style: decimal;
+  list-style-position: inside;
+}
+.post__text table {
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .post__footer {
@@ -492,6 +538,27 @@ li {
 }
 .post__read:hover {
   text-decoration: underline;
+}
+
+.post__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.post__actions a {
+  color: inherit;
+  opacity: 0.6;
+  transition: opacity 0.2s linear;
+}
+.post__actions a:hover {
+  opacity: 0.9;
+}
+
+.post__actions-icon {
+  margin-left: 0.5rem;
 }
 
 .embed {
