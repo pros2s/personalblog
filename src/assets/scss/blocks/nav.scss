@@ -22,11 +22,14 @@
 }
 
 .nav__link {
-  text-decoration: none;
   text-transform: uppercase;
 
   font-size: 1.1rem;
   color: $white;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   &.has-subnav {
     position: relative;
