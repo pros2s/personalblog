@@ -1,0 +1,45 @@
+.related {
+  border-bottom: 1px solid #1C1C1C;
+  padding: 3rem 0 .5rem;
+}
+
+.related__title {
+  font-size: 1.6rem;
+  color: $white;
+  font-weight: 500;
+
+  margin-bottom: 2rem;
+}
+
+.related__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.related__list-item {
+  width: 50%;
+  margin-bottom: 2.5rem;
+}
+
+.related__list-title {
+  font-size: 1.4rem;
+  color: #F3EBA2;
+  font-weight: 500;
+
+  margin-bottom: 0.5rem;
+
+  //text in one line only(with dots at the end)
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  a {
+    color: inherit;
+  }
+}
+
+.related__list-date {
+  font-size: 1.2rem;
+  color: #828282;
+  font-weight: 400;
+}
