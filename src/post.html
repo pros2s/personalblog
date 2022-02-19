@@ -43,7 +43,7 @@ title: Post
 
     <!-- Related -->
     <div class="related">
-      <h3 class="related__title">Интересно почитать</h3>
+      <h3 class="post__subtitle">Интересно почитать</h3>
 
       <ul class="related__list">
         <li class="related__list-item">
@@ -75,5 +75,51 @@ title: Post
         </li>
       </ul>
     </div><!-- /.Related -->
+
+    <!-- Comments -->
+    <h3 class="post__subtitle">Обсуждение</h3>
+    <form class="form" action="/" method="post">
+      <div class="form__group">
+        <textarea class="form__control  form__control--textarea" name="comment-text" placeholder="Текст комментария"></textarea>
+        <span class="form__line"></span>
+      </div>
+
+      <button class="btn  btn--blue  btn--rounded  btn--sm" type="submit">Отправить</button>
+    </form>
+
+    <ul class="comments">
+      <li class="comments__item">
+        <div class="comments__header">
+          <img class="comments__avatar" src="https://via.placeholder.com/30" alt="">
+
+          <div class="comments__author">
+            <div class="comments__name">Александр</div>
+            <time class="comments__pubdate" datetime="2020-09-23 19:21">1 неделю назад</time>
+          </div>
+        </div>
+
+        <div class="comments__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At harum amet voluptates temporibus nemo, velit nulla ex modi eius, quam nam sequi reiciendis ea libero facilis officiis dicta labore cupiditate, laudantium quia voluptatibus quidem laborum hic nostrum? Quas venribus ratione? Voluptates ipsa rerum quas provident totam rem eius cumque aperiam nihil quibusdam nulla et omnis, adipisci natus nam amet doloremque commodi.</div>
+
+        <button class="comments__reply" type="button">ответить</button>
+
+
+        <ul class="comments">
+          <li class="comments__item">
+            <div class="comments__header">
+              <img class="comments__avatar" src="https://via.placeholder.com/30" alt="">
+
+              <div class="comments__author">
+                <div class="comments__name">Александр</div>
+                <time class="comments__pubdate" datetime="2020-09-23 19:21">1 неделю назад</time>
+              </div>
+            </div>
+
+            <div class="comments__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At harum amet voluptates temporibus nemo, velit nulla ex modi eius, quam nam sequi reiciendis ea libero facilis officiis dicta labore cupiditate, laudantium quia voluptatibus quidem laborum hic nostrum? Quas veniam est saepe eligendi blanditiis, quis aspernatur nemo quasi tenetur quia odit cupiditate voluptate fugit ipsam dolorum numquam cumque vel, vitae consectetur assumenda minus libero quisquam modi aut. Iusto omnis neque qui iure repellendus facilis numquam, unde beatae impedit doloribus ratione? Voluptates ipsa rerum quas provident totam rem eius cumque aperiam nihil quibusdam nulla et omnis, adipisci natus nam amet doloremque commodi.</div>
+
+            <button class="comments__reply" type="button">ответить</button>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </article><!-- /.Post -->
