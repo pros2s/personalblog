@@ -37,6 +37,12 @@ li {
   overflow: hidden;
 }
 
+.page__title {
+  font-size: 2.1rem;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
 .header {
   width: calc(100% - 300px);
   display: flex;
@@ -273,6 +279,7 @@ li {
 .search__input {
   background-color: transparent;
   border: none;
+  outline: none;
   display: block;
   padding: 1.3rem 2rem;
   font-family: inherit;
