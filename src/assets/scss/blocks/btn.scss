@@ -17,6 +17,11 @@
   color: $white;
 
   transition: background-color .1s linear;
+
+  &:hover {
+      text-decoration: none;
+  }
+
   &--red {
     background-color: $red;
     box-shadow: 0 .7rem 1.7rem -1rem rgba($red, .3);
