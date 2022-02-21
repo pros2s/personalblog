@@ -12,7 +12,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="">
     
-    <title>Works</title>
+    <title>Cabinet</title>
 </head>
 <body>
 
@@ -119,57 +119,41 @@
 
       <div class="container">
         
-        <h1 class="page__title">Мои работы</h1>
+        <h1 class="page__title  page__title--authenf">Профиль</h1>
         
         
-        <!-- Works -->
-        <div class="works">
-          <div class="works__preview">
-            <img src="assets/images/works/works1.jpg" alt="первая работа"></img>
-          </div>
+        <form class="form" action="/" method="post">
+          <div class="cabinet">
+            <div class="cabinet__form">
+              <div class="form__group  form__group--mb25">
+                <input class="form__control" type="text" placeholder="Имя" value="Александр"></input>
+                <span class="form__line"></span>
+              </div>
+              <div class="form__group  form__group--mb25">
+                <input class="form__control" type="email" placeholder="e-mail" value="alex.provo@mail.com"></input>
+                <span class="form__line"></span>
+              </div>
+              <div class="form__group  form__group--mb25">
+                <input class="form__control" type="password" placeholder="Новый пароль"></input>
+                <span class="form__line"></span>
+              </div>
+              <div class="form__group  form__group--mb25">
+                <input class="form__control" type="password" placeholder="Подтвердите пароль"></input>
+                <span class="form__line"></span>
+              </div>
         
-          <div class="works__content">
-            <h2 class="works__title">altermono.com</h2>
+              <button class="btn  btn--blue  btn--rounded  btn--sm" type="submit">Сохранить</button>
+            </div>
         
-            <p class="works__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, commodi sequi. Quisquam dignissimos molestias dolor praeeserunt corporis suscipit excepturi, nulla rem simque, vero quidem.</p>
+            <div class="cabinet__avatar">
+              <img class="cabinet__photo" src="https://via.placeholder.com/150" alt="аватар">
         
-            <ul class="tags">
-              <li class="tags__item">дизайн</li>
-              <li class="tags__item">создание сайта</li>
-              <li class="tags__item">smm</li>
-            </ul>
-        
-            <div class="works__footer">
-              <a class="btn  btn--blue  btn--rounded  btn--sm" href="#" target="_blank">Перейти на сайт
-              </a>
+              <label class="cabinet__file">
+                <input type="file">выбрать аватар
+              </label>
             </div>
           </div>
-        </div><!-- /.Works -->
-        
-        
-        <!-- Works -->
-        <div class="works">
-          <div class="works__preview">
-            <img src="assets/images/works/works2.jpg" alt="первая работа"></img>
-          </div>
-        
-          <div class="works__content">
-            <h2 class="works__title">codedoco.com</h2>
-        
-            <p class="works__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, commodi sequi. Quisquam dignissimos molestias dolor praipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, commodi sequi. Quisquam dignissimos molestias dolor praeeserunt corporis suscipit excepturi, nulla rem simque, vereeserunt corporis suscipit excepturi, nulla rem simque, vero quidem.</p>
-        
-            <ul class="tags">
-              <li class="tags__item">создание сайта</li>
-              <li class="tags__item">smm</li>
-              <li class="tags__item">дизайн</li>
-            </ul>
-        
-            <div class="works__footer">
-              <a class="btn  btn--blue  btn--rounded  btn--sm" href="#" target="_blank">Перейти на сайт
-              </a>
-            </div>
-          </div>
-        </div><!-- /.Works -->
+        </form>
       </div>
 
     </div><!-- Main -->
