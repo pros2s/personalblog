@@ -1,0 +1,53 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba($secondary, .8);
+  box-shadow: 0 10px 35px rgba($black, 2.5);
+
+  width: 100%;
+  height: 100%;
+
+  padding: 1rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-modal;
+}
+
+.modal__content {
+  background-color: $primary;
+
+  padding: 8rem 8rem 2.5rem;
+  width: 100%;
+  max-width: 50rem;
+  border-radius: 5px;
+
+  position: relative;
+
+  &--share {
+    padding: 7.7rem 13.8rem;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  background: none;
+  border: none;
+  padding: none;
+  cursor: pointer;
+
+  opacity: .5;
+  transition: opacity .2s linear, transform .2s linear;
+
+  &:hover {
+    opacity: .85;
+    transform: rotate(90deg);
+  }
+}

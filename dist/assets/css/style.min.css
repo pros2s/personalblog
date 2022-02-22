@@ -10,6 +10,9 @@ body {
   color: #fff;
   margin: 0;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 ul, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
@@ -786,6 +789,7 @@ li {
   height: 2.5rem;
   resize: none;
   overflow: hidden;
+  padding-bottom: 2.2rem;
 }
 
 .form__line {
@@ -803,6 +807,22 @@ li {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+}
+.form__footer--modal {
+  margin-top: 4rem;
+}
+.form__footer li {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: #B2B2B2;
+  margin-right: 2rem;
+}
+.form__footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.form__footer a:hover {
+  text-decoration: none;
 }
 
 .form__footer-link {
@@ -907,4 +927,48 @@ li {
 }
 .cabinet__file:hover {
   text-decoration: none;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(18, 18, 18, 0.8);
+  box-shadow: 0 10px 35px black;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+}
+
+.modal__content {
+  background-color: #202020;
+  padding: 8rem 8rem 2.5rem;
+  width: 100%;
+  max-width: 50rem;
+  border-radius: 5px;
+  position: relative;
+}
+.modal__content--share {
+  padding: 7.7rem 13.8rem;
+}
+
+.modal__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  padding: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s linear, transform 0.2s linear;
+}
+.modal__close:hover {
+  opacity: 0.85;
+  transform: rotate(90deg);
 }

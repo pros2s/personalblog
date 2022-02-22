@@ -45,6 +45,7 @@
     height: 2.5rem;
     resize: none;
     overflow: hidden;
+    padding-bottom: 2.2rem;
   }
 }
 
@@ -66,11 +67,32 @@
   justify-content: center;
 
   margin-top: 2rem;
+
+  &--modal {
+    margin-top: 4rem;
+  }
+
+  li {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: #B2B2B2;
+
+    margin-right: 2rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .form__footer-link {
   font-size: 1.2rem;
   color: $white;
-  
+
   margin: 0 .5rem;
 }
