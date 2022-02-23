@@ -27,6 +27,7 @@
     height: 2px;
 
     background-color: $white;
+    opacity: 1;
 
     position: absolute;
     left: 0;
@@ -35,6 +36,8 @@
   &::after,
   &::before {
     content: "";
+
+    transition: transform .2s linear;
   }
 
   &::after {
@@ -46,11 +49,32 @@
   }
 
   span {
-  top: 50%;
-  transform: translateY(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+
+    transition: opacity .2s linear;
   }
 
   @include breakpoint($mobile) {
     display: block;
+  }
+
+  .show-sidebar & {
+    span {
+      opacity: 0;
+    }
+
+    &::after,
+    &::before {
+      top: 50%;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
   }
 }
