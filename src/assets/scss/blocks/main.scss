@@ -5,4 +5,8 @@
   min-height: 100vh;
 
   background-color: #181818;
+
+  @include breakpoint($tablet) {
+    padding-left: 0;
+  }
 }
