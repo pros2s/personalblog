@@ -10,7 +10,7 @@ body {
   color: #fff;
   margin: 0;
 }
-body.no-scroll {
+body.no-scroll, body.show-sidebar {
   overflow: hidden;
 }
 
@@ -38,6 +38,22 @@ li {
 
 .page {
   overflow: hidden;
+}
+@media (max-width: 991px) {
+  .show-sidebar .page {
+    position: relative;
+  }
+  .show-sidebar .page::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 }
 
 .page__title {
@@ -115,7 +131,7 @@ li {
   transform: translateY(-50%);
   transition: opacity 0.2s linear;
 }
-@media (max-width: 700px) {
+@media (max-width: 991px) {
   .burger {
     display: block;
   }
@@ -134,6 +150,8 @@ li {
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   width: 300px;
   height: 100vh;
   background-color: #202020;
@@ -146,11 +164,17 @@ li {
 @media (max-width: 991px) {
   .sidebar {
     display: none;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    overflow: auto;
+  }
+  .show-sidebar .sidebar {
+    display: flex;
   }
 }
 
 .sidebar__header {
-  height: 180px;
+  height: 18rem;
   background-color: #121212;
   background: linear-gradient(90deg, black 0%, white 50%, black 100%);
 }
@@ -160,17 +184,20 @@ li {
   height: 100%;
   object-fit: cover;
 }
+@media (max-width: 991px) {
+  .sidebar__header {
+    height: 10rem;
+  }
+}
 
 .sidebar__content {
   position: relative;
-  padding: 0 2rem;
-  margin-top: -5rem;
 }
 
 .sidebar__footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 2rem 1.5rem;
 }
 
 .main {
@@ -198,6 +225,16 @@ li {
   }
 }
 
+.profile {
+  padding: 0 2rem;
+  margin-top: -5rem;
+}
+@media (max-width: 991px) {
+  .profile {
+    margin-top: -1.6rem;
+  }
+}
+
 .profile__avatar {
   display: block;
   margin: 0 auto;
@@ -207,6 +244,25 @@ li {
   border-radius: 50%;
   box-shadow: 0 0.7rem 2rem rgba(0, 0, 0, 0.25);
 }
+@media (max-width: 991px) {
+  .profile__avatar {
+    height: 6.5rem;
+    width: 6.5rem;
+    position: absolute;
+    left: 1.5rem;
+  }
+}
+
+.profile__header {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 991px) {
+  .profile__header {
+    padding-top: 0.5rem;
+    padding-left: 7.2rem;
+  }
+}
 
 .profile__name {
   font-size: 1.8rem;
@@ -215,6 +271,11 @@ li {
   margin-top: 1.9rem;
   margin-bottom: 0.3rem;
 }
+@media (max-width: 991px) {
+  .profile__name {
+    text-align: left;
+  }
+}
 
 .profile__job {
   font-size: 1.4rem;
@@ -222,6 +283,11 @@ li {
   color: #dedede;
   text-align: center;
   margin-bottom: 1.7rem;
+}
+@media (max-width: 991px) {
+  .profile__job {
+    text-align: left;
+  }
 }
 
 .profile__text {
@@ -245,12 +311,22 @@ li {
 .profile__text::after {
   bottom: -3rem;
 }
+@media (max-width: 991px) {
+  .profile__text {
+    display: none;
+  }
+}
 
 .social {
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 991px) {
+  .social {
+    display: none;
+  }
 }
 
 .social__item {
@@ -302,14 +378,27 @@ li {
   margin: 0 auto;
 }
 
-@media (max-width: 700px) {
+.nav--mobile {
+  display: none;
+  margin: 3rem 0;
+}
+@media (max-width: 991px) {
   .nav {
     display: none;
+  }
+  .nav--mobile {
+    display: block;
+    flex-grow: 1;
   }
 }
 
 .nav__list {
   display: flex;
+}
+@media (max-width: 991px) {
+  .nav__list {
+    flex-direction: column;
+  }
 }
 
 .nav__item {
@@ -324,6 +413,14 @@ li {
 }
 .nav__item:hover > .subnav {
   display: block;
+}
+@media (max-width: 991px) {
+  .nav__item:hover {
+    background-color: transparent;
+  }
+  .nav__item:hover > .subnav {
+    display: none;
+  }
 }
 
 .nav__link {
@@ -349,6 +446,13 @@ li {
   border-width: 6px 5px 0 5px;
   border-color: #fff transparent transparent transparent;
 }
+@media (max-width: 991px) {
+  .nav__link {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 300;
+  }
+}
 
 .subnav {
   display: none;
@@ -372,6 +476,11 @@ li {
 .subnav__link:hover {
   background-color: #2c31b4;
   text-decoration: none;
+}
+@media (max-width: 700px) {
+  .subnav__link {
+    font-size: 1.4rem;
+  }
 }
 
 .search {

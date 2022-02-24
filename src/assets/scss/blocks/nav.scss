@@ -1,11 +1,25 @@
 .nav {
-  @include breakpoint($mobile) {
+  &--mobile {
     display: none;
+    margin: 3rem 0;
+  }
+
+  @include breakpoint($tablet) {
+    display: none;
+
+    &--mobile {
+      display: block;
+      flex-grow: 1;
+    }
   }
 }
 
 .nav__list {
   display: flex;
+
+  @include breakpoint($tablet) {
+    flex-direction: column;
+  }
 }
 
 .nav__item {
@@ -23,6 +37,14 @@
 
     > .subnav {
       display: block;
+    }
+
+    @include breakpoint($tablet) {
+      background-color: transparent;
+
+      > .subnav {
+        display: none;
+      }
     }
   }
 }
@@ -54,5 +76,11 @@
       border-width: 6px 5px 0 5px;
       border-color: $white transparent transparent transparent;
     }
+  }
+
+  @include breakpoint($tablet) {
+    font-size: 1.6rem;
+    color: $white;
+    font-weight: 300;
   }
 }

@@ -1,4 +1,7 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
+
   width: $sidebar-width;
   height: 100vh;
 
@@ -12,11 +15,19 @@
 
   @include breakpoint($tablet) {
     display: none;
+
+    .show-sidebar & {
+      display: flex;
+    }
+
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    overflow: auto;
   }
 }
 
 .sidebar__header {
-  height: 180px;
+  height: 18rem;
   background-color: $secondary;
 
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 100%);
@@ -27,17 +38,19 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @include breakpoint($tablet) {
+    height: 10rem;
+  }
 }
 
 .sidebar__content {
   position: relative;
-  padding: 0 2rem;
-  margin-top: -5rem;
 }
 
 .sidebar__footer {
   display: flex;
   justify-content: space-between;
 
-  padding: 0 2rem;
+  padding: 0 2rem 1.5rem;
 }

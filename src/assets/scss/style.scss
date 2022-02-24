@@ -16,7 +16,8 @@ body {
 
   margin: 0;
 
-  &.no-scroll {
+  &.no-scroll,
+  &.show-sidebar {
     overflow: hidden;
   }
 }
