@@ -88,6 +88,11 @@
       text-decoration: none;
     }
   }
+
+  @include breakpoint($mobile) {
+    order: 3;
+    margin-top: 1.5rem;
+  }
 }
 
 .form__footer-link {

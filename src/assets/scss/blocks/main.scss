@@ -7,6 +7,10 @@
   background-color: #181818;
 
   @include breakpoint($tablet) {
-    padding-left: 0;
+    padding: 6.2rem 0 5rem;
+  }
+
+  @include breakpoint($mobile) {
+    padding-bottom: 4.5rem;
   }
 }

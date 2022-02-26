@@ -36,4 +36,8 @@
   &--center {
     text-align: center;
   }
+
+  @include breakpoint($tablet) {
+    margin-bottom: 3rem;
+  }
 }

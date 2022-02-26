@@ -1,14 +1,28 @@
 .cabinet {
   display: flex;
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
 }
 
 .cabinet__form {
   width: 34rem;
+
+  @include breakpoint($mobile) {
+    order: 2;
+  }
 }
 
 .cabinet__avatar {
   flex-grow: 1;
   padding-left: 10.2rem;
+
+  @include breakpoint($mobile) {
+    order: 1;
+    padding-left: 0;
+    margin-bottom: 3rem;
+}
 }
 
 .cabinet__photo {
