@@ -11,6 +11,7 @@
 
   @include breakpoint($mobile) {
     order: 2;
+    width: 100%;
   }
 }
 

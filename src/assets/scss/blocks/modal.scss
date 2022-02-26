@@ -17,6 +17,14 @@
   top: 0;
   left: 0;
   z-index: $z-index-modal;
+
+  &.show {
+    display: flex;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 2rem;
+  }
 }
 
 .modal__content {
@@ -29,8 +37,25 @@
 
   position: relative;
 
+  opacity: 0;
+  transform: translateY(-100px);
+
+  transition: transform 200ms linear, opacity 200ms linear;
+
+  @include breakpoint($mobile) {
+    padding: 7rem 2rem 3rem;
+  }
+
   &--share {
     padding: 7.7rem 13.8rem;
+
+    @include breakpoint($mobile) {
+      padding: 3rem 2rem 3rem;
+    }
+  }
+
+  &--story {
+    padding: 0;
   }
 }
 
@@ -51,4 +76,15 @@
     opacity: .85;
     transform: rotate(90deg);
   }
+
+  @include breakpoint($mobile) {
+    top: 1rem;
+    right: .5rem;
+  }
+}
+
+.modal__video {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 }

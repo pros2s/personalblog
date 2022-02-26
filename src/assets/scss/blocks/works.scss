@@ -8,6 +8,10 @@
 
   max-height: 55.2rem;
   margin-bottom: 3rem;
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
 }
 
 .works__preview {
@@ -19,6 +23,11 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @include breakpoint($mobile) {
+    height: 25rem;
+    max-width: none;
+  }
 }
 
 .works__content {
@@ -27,6 +36,11 @@
 
   max-width: 29rem;
   padding: 2.5rem;
+
+  @include breakpoint($mobile) {
+    max-width: none;
+    padding: 1.5rem;
+  }
 }
 
 .works__title {
@@ -35,6 +49,10 @@
   font-weight: 500;
 
   margin-bottom: 3rem;
+
+  @include breakpoint($mobile) {
+    margin-bottom: 2rem;
+  }
 }
 
 .works__text {
@@ -47,9 +65,17 @@
   max-height: 32rem;
 
   overflow: hidden;
+
+  @include breakpoint($mobile) {
+    max-height: 13rem;
+  }
 }
 
 .works__footer {
   margin-top: auto;
   text-align: right;
+
+  @include breakpoint($mobile) {
+    text-align: left;
+  }
 }

@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/burger */ \"./src/assets/js/blocks/burger.js\");\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n  Object(_blocks_burger__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('.burger');\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/burger */ \"./src/assets/js/blocks/burger.js\");\n/* harmony import */ var _blocks_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/modal */ \"./src/assets/js/blocks/modal.js\");\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n  Object(_blocks_burger__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('.burger');\r\n\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#contactModal', '[data-modal=\"contact-modal\"]');\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#story-modal', '[data-modal=\"story-modal\"]');\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#share-modal', '[data-modal=\"share-modal\"]');\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
 
 /***/ }),
 
@@ -106,7 +106,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blo
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst burger = (burgetSelector) => {\r\n  const burgerBtn = document.querySelector(burgetSelector),\r\n        body = document.body;\r\n\r\n  burgerBtn.addEventListener('click', () => {\r\n    (body.classList.contains('show-sidebar')) ? body.classList.remove('show-sidebar') : body.classList.add('show-sidebar');\r\n  });\r\n};\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (burger);\n\n//# sourceURL=webpack:///./src/assets/js/blocks/burger.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconst burger = (burgetSelector) => {\r\n  const burgerBtn = document.querySelector(burgetSelector),\r\n        body = document.body;\r\n\r\n\r\n  burgerBtn.addEventListener('click', () => {\r\n    (body.classList.contains('show-sidebar')) ? body.classList.remove('show-sidebar') : body.classList.add('show-sidebar');\r\n  });\r\n};\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (burger);\n\n//# sourceURL=webpack:///./src/assets/js/blocks/burger.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/blocks/modal.js":
+/*!***************************************!*\
+  !*** ./src/assets/js/blocks/modal.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst modal = (modalSelector, btnSelector) => {\r\n  const modalwind = document.querySelector(modalSelector),\r\n        modalClose = document.querySelectorAll('.modal__close'),\r\n        modalContent = document.querySelectorAll('.modal__content'),\r\n        modalBtn = document.querySelectorAll(btnSelector),\r\n        body = document.body;\r\n\r\n\r\n  const openModal = () => {\r\n          modalwind.classList.add('show');\r\n          body.classList.add('no-scroll');\r\n\r\n          setTimeout(() => {\r\n            modalContent.forEach(item => {\r\n              item.style.transform = 'none';\r\n              item.style.opacity = '1';\r\n            });\r\n          }, 200);\r\n        },\r\n        closeModal = () => {\r\n          body.classList.remove('no-scroll');\r\n\r\n          modalContent.forEach(item => {\r\n            item.removeAttribute('style');\r\n          });\r\n\r\n          setTimeout(() => {\r\n            modalwind.classList.remove('show');\r\n          }, 200);\r\n        };\r\n\r\n  modalBtn.forEach(btn => {\r\n    btn.addEventListener('click', () => {\r\n      openModal();\r\n    });\r\n  });\r\n\r\n  modalClose.forEach(close => {\r\n    close.addEventListener('click', () => {\r\n      closeModal();\r\n    });\r\n  });\r\n\r\n  modalwind.addEventListener('click', e => {\r\n    if (e.target == modalwind) {\r\n      closeModal();\r\n    }\r\n  });\r\n};\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (modal);\n\n//# sourceURL=webpack:///./src/assets/js/blocks/modal.js?");
 
 /***/ })
 

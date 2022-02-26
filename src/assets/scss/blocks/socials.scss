@@ -5,8 +5,10 @@
   margin: 0;
   padding: 0;
 
-  @include breakpoint($tablet) {
-    display: none;
+  .sidebar & {
+    @include breakpoint($tablet) {
+      display: none;
+    }
   }
 }
 

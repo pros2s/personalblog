@@ -124,6 +124,10 @@
       <nav class="nav  nav--mobile">
         <ul class="nav__list">
           <li class="nav__item">
+            <a class="nav__link" href="index.html">Главная</a>
+          </li>
+    
+          <li class="nav__item">
             <a class="nav__link  has-subnav" href="#">Статьи</a>
     
             <ul class="subnav">
@@ -157,7 +161,7 @@
     
       <div class="sidebar__footer">
         <a class="btn  btn--red" href="works.html">Мои работы</a>
-        <button class="btn  btn--blue" type="button">Написать мне</button>
+        <button class="btn  btn--blue" type="button" data-modal="contact-modal">Написать мне</button>
       </div><!-- sidebar__footer -->
     </aside>
     <!-- Main -->
@@ -221,9 +225,89 @@
     </main><!-- Main -->
   </div><!-- Page -->
 
-  <div class="modal">
-    <video class="modal__video" src="" poster="https://via.placeholder.com/420x580"></video>
-  </div>
+  <div class="modal" id="story-modal">
+    <button class="modal__close">
+      <img src="assets/images/close.svg" alt="закрыть">
+    </button>
+  
+    <div class="modal__content  modal__content--story">
+      <video class="modal__video" src="" poster="https://via.placeholder.com/420x580"></video>
+    </div>
+  </div>  <!-- Modal -->
+  <div class="modal" id="contactModal">
+    <!-- Modal__content -->
+    <div class="modal__content">
+      <button class="modal__close">
+        <img src="assets/images/close.svg" alt="закрыть">
+      </button>
+  
+      <form class="form  form--passw" action="/" method="post">
+        <div class="cabinet__form">
+          <div class="form__group  form__group--mb25">
+            <input class="form__control" type="name" placeholder="Имя"></input>
+            <span class="form__line"></span>
+          </div>
+          <div class="form__group  form__group--mb25">
+            <input class="form__control" type="email" placeholder="e-mail"></input>
+            <span class="form__line"></span>
+          </div>
+          <div class="form__group  form__group--mb25">
+            <textarea class="form__control  form__control--textarea" type="text" placeholder="Текст сообщения"></textarea>
+            <span class="form__line"></span>
+          </div>
+  
+          <button class="btn  btn--blue  btn--rounded  btn--sm" type="submit">Отправить</button>
+        </div>
+  
+        <ul class="form__footer  form__footer--modal">
+          <li>
+            e-mail:
+            <a href="mailto:info@mywebsite.ru">info@mywebsite.ru</a>
+          </li>
+          <li>
+            тел:
+            <a href="tel:+94323285622">+943-232-856-22</a>
+          </li>
+        </ul>
+      </form>
+  
+    </div><!-- Modal__content -->
+  </div><!-- Modal -->  <!-- Modal -->
+  <div class="modal" id="share-modal">
+    <!-- Modal__content -->
+    <div class="modal__content  modal__content--share">
+      <button class="modal__close">
+        <img src="assets/images/close.svg" alt="закрыть">
+      </button>
+  
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="assets/images/share-modal/facebook.svg" >
+          </a>
+        </li>
+  
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="assets/images/share-modal/twitter.svg" >
+          </a>
+        </li>
+  
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="assets/images/share-modal/vk.svg">
+          </a>
+        </li>
+  
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="assets/images/share-modal/file.svg">
+          </a>
+        </li>
+      </ul><!-- social -->
+  
+    </div><!-- Modal__content -->
+  </div><!-- Modal -->
   <script src="assets/js/app.js"></script>
 </body>
 </html>

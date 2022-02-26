@@ -78,6 +78,10 @@
     color: #B2B2B2;
 
     margin-right: 2rem;
+
+    @include breakpoint($mobile) {
+      margin-bottom: .5rem;
+    }
   }
 
   a {
@@ -92,6 +96,14 @@
   @include breakpoint($mobile) {
     order: 3;
     margin-top: 1.5rem;
+
+    .modal & {
+      margin-top: 3rem;
+
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
   }
 }
 
