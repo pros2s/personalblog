@@ -10,8 +10,10 @@ body {
   color: #fff;
   margin: 0;
 }
-body.no-scroll, body.show-sidebar {
-  overflow: hidden;
+@media (max-width: 991px) {
+  body.no-scroll, body.show-sidebar {
+    overflow: hidden;
+  }
 }
 
 ul, h1, h2, h3, h4, h5, h6, p {
@@ -609,13 +611,13 @@ li {
   background-color: #121212;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.45);
   margin-bottom: 3rem;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .add-post__form {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .add-post__textarea {
@@ -625,12 +627,13 @@ li {
   resize: none;
   outline: none;
   overflow: hidden;
-  height: 25px;
+  height: 3.5rem;
   width: 80%;
   font-family: inherit;
   font-size: 1.5rem;
   color: #fff;
   opacity: 0.85;
+  position: relative;
 }
 .add-post__textarea::placeholder {
   color: #D2D2D2;

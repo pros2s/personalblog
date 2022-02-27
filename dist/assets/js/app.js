@@ -94,7 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/burger */ \"./src/assets/js/blocks/burger.js\");\n/* harmony import */ var _blocks_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/modal */ \"./src/assets/js/blocks/modal.js\");\n/* harmony import */ var _blocks_subnav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/subnav */ \"./src/assets/js/blocks/subnav.js\");\n\r\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n  Object(_blocks_burger__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('.burger');\r\n\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#contactModal', '[data-modal=\"contact-modal\"]');\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#story-modal', '[data-modal=\"story-modal\"]');\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#share-modal', '[data-modal=\"share-modal\"]');\r\n\r\n  Object(_blocks_subnav__WEBPACK_IMPORTED_MODULE_2__[\"default\"])('.nav--mobile');\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/burger */ \"./src/assets/js/blocks/burger.js\");\n/* harmony import */ var _blocks_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/modal */ \"./src/assets/js/blocks/modal.js\");\n/* harmony import */ var _blocks_subnav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/subnav */ \"./src/assets/js/blocks/subnav.js\");\n/* harmony import */ var _blocks_autoresize__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/autoresize */ \"./src/assets/js/blocks/autoresize.js\");\n\r\n\r\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n  Object(_blocks_burger__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('.burger');\r\n\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#contactModal', '[data-modal=\"contact-modal\"]');\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#story-modal', '[data-modal=\"story-modal\"]');\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#share-modal', '[data-modal=\"share-modal\"]');\r\n\r\n  Object(_blocks_subnav__WEBPACK_IMPORTED_MODULE_2__[\"default\"])('.nav--mobile');\r\n\r\n  Object(_blocks_autoresize__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('[data-textarea]');\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/blocks/autoresize.js":
+/*!********************************************!*\
+  !*** ./src/assets/js/blocks/autoresize.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst autoResize = (textareaSelector) => {\r\n  const textArea = document.querySelectorAll(textareaSelector);\r\n\r\n  textArea.forEach(area => {\r\n    area.addEventListener('input', e => {\r\n      const target = e.target;\r\n\r\n      target.style.height = '3.5rem';\r\n      target.style.paddingBottom = '0';\r\n      target.style.height = target.scrollHeight + 'px';\r\n    });\r\n  });\r\n};\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (autoResize);\n\n//# sourceURL=webpack:///./src/assets/js/blocks/autoresize.js?");
 
 /***/ }),
 
