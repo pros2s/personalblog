@@ -466,7 +466,7 @@ li {
 }
 
 .subnav {
-  display: none;
+  display: block;
   position: absolute;
   top: 100%;
   left: 0;
@@ -474,8 +474,19 @@ li {
   border-radius: 0 0 0.5rem 0.5rem;
   box-shadow: 0 0.6rem 0.8rem rgba(0, 0, 0, 0.2);
   width: 16.5rem;
-  padding: 0.7rem 0;
+  height: 0;
+  padding: 0;
   margin: 0;
+}
+.subnav.show {
+  height: 9rem;
+  padding: 0.7rem 0;
+  z-index: 1;
+  transition: height 0.2s linear;
+}
+
+.subnav__item {
+  display: none;
 }
 
 .subnav__link {

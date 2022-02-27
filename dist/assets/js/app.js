@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/burger */ \"./src/assets/js/blocks/burger.js\");\n/* harmony import */ var _blocks_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/modal */ \"./src/assets/js/blocks/modal.js\");\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n  Object(_blocks_burger__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('.burger');\r\n\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#contactModal', '[data-modal=\"contact-modal\"]');\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#story-modal', '[data-modal=\"story-modal\"]');\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#share-modal', '[data-modal=\"share-modal\"]');\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/burger */ \"./src/assets/js/blocks/burger.js\");\n/* harmony import */ var _blocks_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/modal */ \"./src/assets/js/blocks/modal.js\");\n/* harmony import */ var _blocks_subnav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/subnav */ \"./src/assets/js/blocks/subnav.js\");\n\r\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n  Object(_blocks_burger__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('.burger');\r\n\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#contactModal', '[data-modal=\"contact-modal\"]');\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#story-modal', '[data-modal=\"story-modal\"]');\r\n  Object(_blocks_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('#share-modal', '[data-modal=\"share-modal\"]');\r\n\r\n  Object(_blocks_subnav__WEBPACK_IMPORTED_MODULE_2__[\"default\"])('.nav--mobile');\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
 
 /***/ }),
 
@@ -119,6 +119,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst burger = (burgetSelecto
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\nconst modal = (modalSelector, btnSelector) => {\r\n  const modalwind = document.querySelector(modalSelector),\r\n        modalClose = document.querySelectorAll('.modal__close'),\r\n        modalContent = document.querySelectorAll('.modal__content'),\r\n        modalBtn = document.querySelectorAll(btnSelector),\r\n        body = document.body;\r\n\r\n\r\n  const openModal = () => {\r\n          modalwind.classList.add('show');\r\n          body.classList.add('no-scroll');\r\n\r\n          setTimeout(() => {\r\n            modalContent.forEach(item => {\r\n              item.style.transform = 'none';\r\n              item.style.opacity = '1';\r\n            });\r\n          }, 200);\r\n        },\r\n        closeModal = () => {\r\n          body.classList.remove('no-scroll');\r\n\r\n          modalContent.forEach(item => {\r\n            item.removeAttribute('style');\r\n          });\r\n\r\n          setTimeout(() => {\r\n            modalwind.classList.remove('show');\r\n          }, 200);\r\n        };\r\n\r\n  modalBtn.forEach(btn => {\r\n    btn.addEventListener('click', () => {\r\n      openModal();\r\n    });\r\n  });\r\n\r\n  modalClose.forEach(close => {\r\n    close.addEventListener('click', () => {\r\n      closeModal();\r\n    });\r\n  });\r\n\r\n  modalwind.addEventListener('click', e => {\r\n    if (e.target == modalwind) {\r\n      closeModal();\r\n    }\r\n  });\r\n};\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (modal);\n\n//# sourceURL=webpack:///./src/assets/js/blocks/modal.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/blocks/subnav.js":
+/*!****************************************!*\
+  !*** ./src/assets/js/blocks/subnav.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst subnav = (navSelector) => {\r\n  const nav = document.querySelector(navSelector),\r\n        subNav = nav.querySelector('.subnav');\r\n\r\n  nav.addEventListener('click', e => {\r\n    const hasSub = e.currentTarget.querySelector('.has-subnav');\r\n    if (hasSub) {\r\n      if (!subNav.classList.contains('show')) {\r\n        setTimeout(() => {\r\n          subNav.classList.add('show');\r\n          subNav.querySelectorAll('.subnav__item').forEach(item => {\r\n            item.style.display = 'block';\r\n          });\r\n        }, 200);\r\n      }\r\n      else {\r\n        subNav.classList.remove('show');\r\n\r\n        subNav.querySelectorAll('.subnav__item').forEach(item => {\r\n          item.removeAttribute('style');\r\n        });\r\n      }\r\n    }\r\n  });\r\n};\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (subnav);\n\n//# sourceURL=webpack:///./src/assets/js/blocks/subnav.js?");
 
 /***/ })
 
