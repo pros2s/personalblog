@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blo
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst burger = (burgetSelector) => {\r\n  const burgerBtn = document.querySelector(burgetSelector),\r\n        body = document.body;\r\n\r\n\r\n  burgerBtn.addEventListener('click', () => {\r\n    (body.classList.contains('show-sidebar')) ? body.classList.remove('show-sidebar') : body.classList.add('show-sidebar');\r\n  });\r\n};\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (burger);\n\n//# sourceURL=webpack:///./src/assets/js/blocks/burger.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconst burger = (burgetSelector) => {\r\n  const burgerBtn = document.querySelector(burgetSelector),\r\n        page = document.querySelector('.page'),\r\n        body = document.body;\r\n\r\n\r\n  burgerBtn.addEventListener('click', () => {\r\n    (body.classList.contains('show-sidebar')) ? closeBurgerMenu() : openBurgerMenu();\r\n  });\r\n\r\n  const openBurgerMenu = () => {\r\n    let mask = document.createElement('div');\r\n    mask.classList.add('page__mask');\r\n    mask.addEventListener('click', closeBurgerMenu);\r\n    page.appendChild(mask);\r\n\r\n    body.classList.add('show-sidebar');\r\n  };\r\n\r\n  const closeBurgerMenu = () => {\r\n    body.classList.remove('show-sidebar');\r\n    page.querySelector('.page__mask').remove();\r\n  };\r\n\r\n};\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (burger);\n\n//# sourceURL=webpack:///./src/assets/js/blocks/burger.js?");
 
 /***/ }),
 
